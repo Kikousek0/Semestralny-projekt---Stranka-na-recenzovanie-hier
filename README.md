@@ -1,0 +1,1 @@
+# Semestr-lny-projekt---Str-nka-na-recenzovanie-hier

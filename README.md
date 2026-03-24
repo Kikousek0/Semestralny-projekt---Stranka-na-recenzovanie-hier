@@ -20,7 +20,7 @@ O čom bude projekt
 
 -naprogramované v PHP
 
--použijem triedy (OOP)
+-použijem triedy
 
 -napojené na databázu (MySQL)
 

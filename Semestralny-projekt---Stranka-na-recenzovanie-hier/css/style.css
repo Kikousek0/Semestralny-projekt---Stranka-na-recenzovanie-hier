@@ -1,0 +1,140 @@
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a, button {
+  transition: all 0.3s ease;
+  color: #4da6ff;
+}
+
+a:hover {
+  color: #1a8cff;
+}
+
+.tm-header, .tm-footer {
+  background-color: #111;
+  color: #eee;
+}
+
+.tm-header a, .tm-footer a {
+  color: #eee;
+}
+
+.tm-header a:hover, .tm-footer a:hover {
+  color: #4da6ff;
+}
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 15px; }
+.row { display: flex; flex-wrap: wrap; margin: 0 -15px; }
+[class*="col-"] { padding: 0 15px; }
+
+.tm-btn {
+  display: inline-block;
+  font-size: 1rem;
+  padding: 10px 25px;
+  border: 0;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.tm-btn-primary { background-color: #4da6ff; color: #111; }
+.tm-btn-primary:hover { background-color: #1a8cff; color: #fff; }
+
+.tm-btn-success { background-color: #32cd32; color: #111; }
+.tm-btn-success:hover { background-color: #28a428; color: #fff; }
+
+.tm-btn-danger { background-color: #ff4d4d; color: #111; }
+.tm-btn-danger:hover { background-color: #cc0000; color: #fff; }
+
+main {
+  padding: 60px 15px;
+  background-color: #222; /* tmavšie pozadie pre obsah */
+  min-height: 80vh;
+}
+
+.tm-contact-form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-group { margin-bottom: 20px; }
+.form-control {
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: #eee;
+  border: 1px solid #555;
+  border-radius: 4px;
+}
+
+.form-control:focus {
+  border-color: #4da6ff;
+  outline: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #eee;
+  margin-bottom: 20px;
+}
+
+p, address {
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.img-fluid { max-width: 100%; height: auto; }
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', Arial, sans-serif;
+  background-color: #111;
+  color: #eee;
+  overflow-x: hidden;
+}
+
+.hero-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-nav {
+  position: relative;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px 0;
+}
+
+.hero-nav-ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.hero-nav-ul li a {
+  color: #ffffff !important;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+}

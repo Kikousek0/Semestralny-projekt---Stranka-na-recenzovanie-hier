@@ -1,6 +1,10 @@
-        <?php require('parts/header.php'); ?>
-        <main class="main-page">
-            <h1>Hlavná stránka</h1>
-		</main>
+<?php require('parts/header.php'); ?>
 
-		<?php require 'parts/footer.php' ?>
+    <main class="home-page">
+        <section class="tm-welcome-section text-center">
+            <h1>Vitajte na našej stránke</h1>
+            <p>Táto prvá verzia demonštruje tmavý štýl a základnú štruktúru.</p>
+        </section>
+    </main>
+
+<?php require('parts/footer.php'); ?>

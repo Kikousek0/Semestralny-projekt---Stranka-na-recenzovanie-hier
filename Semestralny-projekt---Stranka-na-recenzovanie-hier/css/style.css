@@ -7,14 +7,6 @@
   padding: 0;
 }
 
-body {
-  font-family: 'Open Sans', Arial, sans-serif;
-  font-size: 17px;
-  background-color: #1a1a1a;
-  color: #eee;
-  overflow-x: hidden;
-}
-
 a, button {
   transition: all 0.3s ease;
   color: #4da6ff;
@@ -97,14 +89,22 @@ p, address {
 }
 
 .img-fluid { max-width: 100%; height: auto; }
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', Arial, sans-serif;
+  background-color: #111;
+  color: #eee;
+  overflow-x: hidden;
+}
+
 .hero-section {
   position: relative;
-  width: 100%;
-  height: 70vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 100vh;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .hero-bg {
@@ -113,20 +113,28 @@ p, address {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  filter: brightness(0.4);
   z-index: 1;
 }
 
-.hero-content {
+.hero-nav {
   position: relative;
-  z-index: 2;
-  display: flex;
-  gap: 25px;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px 0;
 }
 
-.hero-content .tm-btn {
-  padding: 15px 35px;
+.hero-nav-ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.hero-nav-ul li a {
+  color: #ffffff !important;
+  text-decoration: none;
   font-size: 1.2rem;
-  border-radius: 5px;
+  font-weight: bold;
 }

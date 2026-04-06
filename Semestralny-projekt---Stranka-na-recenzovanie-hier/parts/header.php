@@ -12,13 +12,20 @@
 </head>
 <body>
 
-<main class="home-page text-center">
+<header class="tm-header">
     <div class="hero-section">
-        <img src="img/game-background.jpg" alt="Game Background" class="hero-bg" />
-        <div class="hero-content">
-            <a href="index.php" class="tm-btn tm-btn-primary">Home</a>
-            <a href="about.php" class="tm-btn tm-btn-success">About</a>
-            <a href="contact.php" class="tm-btn tm-btn-danger">Contact</a>
+        <div class="hero-bg" id="parallax-scene">
+            <div class="layer" data-depth="0.2">
+                <img src="img/game-background.jpg" alt="Background" style="width: 100%; height: 120vh; object-fit: cover;">
+            </div>
         </div>
+
+        <nav class="hero-nav">
+            <ul class="hero-nav-ul">
+                <li><a href="index.php">Home</a></li>
+                <li><a href="about.php">About</a></li>
+                <li><a href="contact.php">Contact</a></li>
+            </ul>
+        </nav>
     </div>
-</main>
+</header>

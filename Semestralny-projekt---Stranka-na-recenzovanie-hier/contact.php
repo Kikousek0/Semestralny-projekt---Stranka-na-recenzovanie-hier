@@ -1,44 +1,33 @@
 <?php
-$show_confirmation = false;
-$user_name = "";
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $user_name = htmlspecialchars($_POST['name']);
-    $user_email = htmlspecialchars($_POST['email']);
-    $user_message = htmlspecialchars($_POST['message']);
-    $show_confirmation = true;
-}
+$page_title = "Napíšte nám";
 require('parts/header.php');
 ?>
-
     <main class="contact-page">
         <div class="container">
-            <h1>Kontakt</h1>
+            <div class="content-box">
+                <h3>Napíšte nám</h3>
+                <form id="contact" method="post" action="db/spracovanieFormulara.php">
 
-            <?php if ($show_confirmation): ?>
-                <div style="background: #28a428; color: white; padding: 15px; margin-bottom: 20px; border-radius: 4px;">
-                    <p>Ďakujeme, <strong><?php echo $user_name; ?></strong>! Vaša správa bola úspešne odoslaná.</p>
-                </div>
-            <?php endif; ?>
+                    <div class="form-group">
+                        <input type="text" name="meno" id="meno" placeholder="Vaše meno" class="form-control" required>
+                    </div>
 
-            <form method="POST" action="contact.php" class="contact-form">
-                <div class="form-group">
-                    <label>Meno:</label>
-                    <input type="text" name="name" class="form-control" required>
-                </div>
+                    <div class="form-group">
+                        <input type="email" name="email" id="email" placeholder="Váš email" class="form-control" required>
+                    </div>
 
-                <div class="form-group">
-                    <label>Email:</label>
-                    <input type="email" name="email" class="form-control" required>
-                </div>
+                    <div class="form-group">
+                        <textarea name="sprava" id="sprava" placeholder="Vaša správa" class="form-control" rows="5" required></textarea>
+                    </div>
 
-                <div class="form-group">
-                    <label>Správa:</label>
-                    <textarea name="message" class="form-control" required></textarea>
-                </div>
+                    <div class="form-group" style="text-align: left;">
+                        <input type="checkbox" name="suhlas" id="suhlas" required>
+                        <label for="suhlas"> Súhlasím so spracovaním osobných údajov.</label>
+                    </div>
 
-                <button type="submit" class="tm-btn tm-btn-primary">Odoslať</button>
-            </form>
+                    <input type="submit" name="odoslat" value="Odoslať" class="tm-btn tm-btn-primary">
+                </form>
+            </div>
         </div>
     </main>
 

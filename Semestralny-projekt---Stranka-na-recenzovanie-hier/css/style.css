@@ -188,11 +188,46 @@ main {
   display: flex;
   justify-content: center;
   gap: 40px;
-  margin: 0;
+  min-width: 500px;
+  align-items: center;
 }
 
 .hero-nav-ul a {
   color: white;
   font-size: 1.3rem;
   text-decoration: none;
+}
+
+.tm-btn-theme {
+  display: inline-block;
+  width: 130px;
+  text-align: center;
+  background: #444;
+  padding: 5px 0;
+  border-radius: 20px;
+  font-size: 0.9rem !important;
+  border: 1px solid #555;
+  white-space: nowrap;
+}
+
+body.light-mode {
+  background-image: none !important;
+  background-color: #f4f4f4 !important;
+  color: #222 !important;
+}
+
+body.light-mode .content-box {
+  background-color: #ffffff !important;
+  color: #333 !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  border: 1px solid #ddd;
+}
+
+body.light-mode .hero-content h1 {
+  color: #222 !important;
+  text-shadow: none;
+}
+
+body.light-mode p, body.light-mode h2 {
+  color: #444 !important;
 }

@@ -12,16 +12,30 @@
 </head>
 <body>
 
-<header class="tm-header">
+<?php
+$theme = isset($_GET['theme']) ? $_GET['theme'] : 'dark';
+$body_class = ($theme === 'light') ? 'light-mode' : 'dark-mode';
+?>
+
+<header class="tm-header" style="background-color: <?php echo $theme === 'dark' ? 'rgba(17,17,17,0.95)' : 'rgba(240,240,240,0.95)'; ?>">
     <div class="header-container">
         <div class="logo">
-            <a href="index.php">GAMER<span>ZONE</span></a>
+            <a href="index.php?theme=<?php echo $theme; ?>" style="color: <?php echo $theme === 'dark' ? '#4da6ff' : '#0056b3'; ?> !important;">
+                GAMER<span>ZONE</span>
+            </a>
         </div>
+
         <nav class="hero-nav">
             <ul class="hero-nav-ul">
-                <li><a href="index.php">Domov</a></li>
-                <li><a href="about.php">O nás</a></li>
-                <li><a href="contact.php">Kontakt</a></li>
+                <li><a href="index.php?theme=<?php echo $theme; ?>">Domov</a></li>
+                <li><a href="about.php?theme=<?php echo $theme; ?>">O nás</a></li>
+                <li><a href="contact.php?theme=<?php echo $theme; ?>">Kontakt</a></li>
+
+                <li>
+                    <a href="?theme=<?php echo $theme === 'dark' ? 'light' : 'dark'; ?>" class="tm-btn-theme">
+                        <?php echo $theme === 'dark' ? '☀️ Svetlý mód' : '🌙 Tmavý mód'; ?>
+                    </a>
+                </li>
             </ul>
         </nav>
     </div>

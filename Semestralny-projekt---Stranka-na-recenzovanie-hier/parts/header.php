@@ -13,14 +13,22 @@
 <body>
 
 <header class="tm-header">
-    <div class="hero-section">
-
+    <div class="header-container">
+        <div class="logo">
+            <a href="index.php">GAMER<span>ZONE</span></a>
+        </div>
         <nav class="hero-nav">
             <ul class="hero-nav-ul">
-                <li><a href="index.php">Home</a></li>
-                <li><a href="about.php">About</a></li>
-                <li><a href="contact.php">Contact</a></li>
+                <li><a href="index.php">Domov</a></li>
+                <li><a href="about.php">O nás</a></li>
+                <li><a href="contact.php">Kontakt</a></li>
             </ul>
         </nav>
     </div>
 </header>
+
+<div class="hero-section">
+    <div class="hero-content">
+        <h1><?php echo isset($page_title) ? $page_title : 'GamerZone'; ?></h1>
+    </div>
+</div>

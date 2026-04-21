@@ -1,8 +1,13 @@
-<?php require('parts/header.php'); ?>
-    <main class="main-content">
-        <div class="content-box">
-            <h1>Game Reviews</h1>
-            <p>Vitaj na stránke s recenziami hier.</p>
+<?php
+$page_title = "Vitajte";
+require('parts/header.php');
+?>
+    <main>
+        <div class="container">
+            <div class="content-box">
+                <h2>Hlavný nadpis indexu</h2>
+                <p>Obsah domovskej stránky...</p>
+            </div>
         </div>
     </main>
 <?php require('parts/footer.php'); ?>

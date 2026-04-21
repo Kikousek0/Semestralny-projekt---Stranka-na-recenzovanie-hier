@@ -5,30 +5,27 @@ require('parts/header.php');
     <main class="contact-page">
         <div class="container">
             <div class="content-box">
-                <h2>Neváhajte</h2>
-                <p>Máte otázky? Použite náš formulár nižšie.</p>
+                <h3>Napíšte nám</h3>
+                <form id="contact" method="post" action="db/spracovanieFormulara.php">
 
-                <h1 style="margin-top: 30px;">Kontakt</h1>
-
-                <form method="POST" action="contact.php" class="contact-form" style="text-align: left;">
                     <div class="form-group">
-                        <label>Meno:</label>
-                        <input type="text" name="name" class="form-control" required>
+                        <input type="text" name="meno" id="meno" placeholder="Vaše meno" class="form-control" required>
                     </div>
 
                     <div class="form-group">
-                        <label>Email:</label>
-                        <input type="email" name="email" class="form-control" required>
+                        <input type="email" name="email" id="email" placeholder="Váš email" class="form-control" required>
                     </div>
 
                     <div class="form-group">
-                        <label>Správa:</label>
-                        <textarea name="message" class="form-control" rows="5" required></textarea>
+                        <textarea name="sprava" id="sprava" placeholder="Vaša správa" class="form-control" rows="5" required></textarea>
                     </div>
 
-                    <div style="text-align: center;">
-                        <button type="submit" class="tm-btn tm-btn-primary">Odoslať</button>
+                    <div class="form-group" style="text-align: left;">
+                        <input type="checkbox" name="suhlas" id="suhlas" required>
+                        <label for="suhlas"> Súhlasím so spracovaním osobných údajov.</label>
                     </div>
+
+                    <input type="submit" name="odoslat" value="Odoslať" class="tm-btn tm-btn-primary">
                 </form>
             </div>
         </div>

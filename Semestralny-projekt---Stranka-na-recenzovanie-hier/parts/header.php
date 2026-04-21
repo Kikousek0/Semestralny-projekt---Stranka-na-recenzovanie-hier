@@ -14,11 +14,6 @@
 
 <header class="tm-header">
     <div class="hero-section">
-        <div class="hero-bg" id="parallax-scene">
-            <div class="layer" data-depth="0.2">
-                <img src="img/game-background.jpg" alt="Background" style="width: 100%; height: 120vh; object-fit: cover;">
-            </div>
-        </div>
 
         <nav class="hero-nav">
             <ul class="hero-nav-ul">

@@ -1,8 +1,8 @@
 <?php require('parts/header.php'); ?>
-    <main>
-        <div class="container">
-            <h2>Vitajte na našej stránke</h2>
-            <p>Toto je hlavný obsah indexu.</p>
+    <main class="main-content">
+        <div class="content-box">
+            <h1>Game Reviews</h1>
+            <p>Vitaj na stránke s recenziami hier.</p>
         </div>
     </main>
 <?php require('parts/footer.php'); ?>

@@ -28,7 +28,7 @@ $body_class = ($theme === 'light') ? 'light-mode' : 'dark-mode';
         <nav class="hero-nav">
             <ul class="hero-nav-ul">
                 <li><a href="index.php?theme=<?php echo $theme; ?>">Domov</a></li>
-                <li><a href="about.php?theme=<?php echo $theme; ?>">O nás</a></li>
+                <li><a href="about.php?theme=<?php echo $theme; ?>">O projekte</a></li>
                 <li><a href="contact.php?theme=<?php echo $theme; ?>">Kontakt</a></li>
                 <li><a href="admin.php?theme=<?php echo $theme; ?>" style="color: #ffaa00 !important;">Admin</a></li>
 

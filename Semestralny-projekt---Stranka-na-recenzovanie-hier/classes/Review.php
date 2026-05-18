@@ -46,4 +46,47 @@ class Review extends Database {
             return false;
         }
     }
+    // R - Read: Načítanie úplne všetkých recenzií pre potreby admina
+    public function getAllReviews() {
+        try {
+            $sql = "SELECT r.*, g.title AS game_title FROM reviews r 
+                    JOIN games g ON r.game_id = g.id 
+                    ORDER BY r.created_at DESC";
+            $statement = $this->getConnection()->prepare($sql);
+            $statement->execute();
+            return $statement->fetchAll();
+        } catch (PDOException $e) {
+            echo "Chyba pri načítaní všetkých recenzií: " . $e->getMessage();
+            return [];
+        }
+    }
+
+    public function getReviewById($id) {
+        try {
+            $sql = "SELECT * FROM reviews WHERE id = :id";
+            $statement = $this->getConnection()->prepare($sql);
+            $statement->execute([':id' => $id]);
+            return $statement->fetch();
+        } catch (PDOException $e) {
+            echo "Chyba pri detaile recenzie: " . $e->getMessage();
+            return false;
+        }
+    }
+
+    // U - Update: Úprava existujúcej recenzie adminom
+    public function updateReview($id, $author, $text, $rating) {
+        try {
+            $sql = "UPDATE reviews SET author = :author, text = :text, rating = :rating WHERE id = :id";
+            $statement = $this->getConnection()->prepare($sql);
+            return $statement->execute([
+                ':id' => $id,
+                ':author' => $author,
+                ':text' => $text,
+                ':rating' => $rating
+            ]);
+        } catch (PDOException $e) {
+            echo "Chyba pri úprave recenzie: " . $e->getMessage();
+            return false;
+        }
+    }
 }
